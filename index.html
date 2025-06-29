@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harshal's Acting Coaching</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS for animations and enhancements */
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+        }
+        
+        .gallery-item {
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+        }
+        
+        .enquiry-card {
+            transition: all 0.3s ease;
+        }
+        
+        .enquiry-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.2);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #1a202c;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #4a5568;
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #718096;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-gray-800 shadow-lg fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-yellow-400 text-xl font-bold">Harshal's</span>
+                    <span class="text-white text-xl font-bold ml-1">Actor's Room</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#home" class="text-gray-300 hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition">Home</a>
+                    <a href="#about" class="text-gray-300 hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition">About</a>
+                    <a href="#enquiry" class="text-gray-300 hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition">Enquiry</a>
+<a href="admin/login.html" class="bg-yellow-600 text-gray-900 hover:bg-yellow-500 px-3 py-2 rounded-md text-sm font-medium transition">Admin</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-300 hover:text-yellow-400 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 pb-3 px-2">
+            <a href="#home" class="block text-gray-300 hover:text-yellow-400 px-3 py-2 rounded-md text-base font-medium transition">Home</a>
+            <a href="#about" class="block text-gray-300 hover:text-yellow-400 px-3 py-2 rounded-md text-base font-medium transition">About</a>
+            <a href="#enquiry" class="block text-gray-300 hover:text-yellow-400 px-3 py-2 rounded-md text-base font-medium transition">Enquiry</a>
+<a href="admin/login.html" class="bg-yellow-600 text-gray-900 hover:bg-yellow-500 px-3 py-2 rounded-md text-sm font-medium transition">Admin</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-image pt-16 flex items-center justify-center">
+        <div class="container mx-auto px-6 text-center fade-in">
+            <h1 class="text-4xl md:text-6xl font-bold text-yellow-400 mb-4">Harshal's Acting Academy</h1>
+            <p class="text-xl md:text-2xl text-gray-200 mb-8">Transform your acting skills with personalized coaching</p>
+            <a href="#enquiry" class="bg-yellow-600 hover:bg-yellow-500 text-gray-900 font-bold py-3 px-6 rounded-full text-lg transition duration-300 transform hover:scale-105 inline-block">
+                Enquire Now <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-12 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-yellow-400 mb-12">Gallery</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1549109786-eb80da56e693?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" 
+                         alt="Harshal teaching students" 
+                         class="w-full h-64 object-cover">
+                    <div class="px-6 py-4 bg-gray-700">
+                        <div class="font-bold text-xl mb-2 text-yellow-400">Group Workshop</div>
+                        <p class="text-gray-300 text-base">Harshal conducting an intensive group acting workshop</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" 
+                         alt="Harshal in performance" 
+                         class="w-full h-64 object-cover">
+                    <div class="px-6 py-4 bg-gray-700">
+                        <div class="font-bold text-xl mb-2 text-yellow-400">Stage Performance</div>
+                        <p class="text-gray-300 text-base">Harshal demonstrating powerful stage presence</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="One-on-one coaching" 
+                         class="w-full h-64 object-cover">
+                    <div class="px-6 py-4 bg-gray-700">
+                        <div class="font-bold text-xl mb-2 text-yellow-400">Personal Coaching</div>
+                        <p class="text-gray-300 text-base">Harshal providing individualized attention to students</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-12">
+                    <img src="https://images.unsplash.com/photo-1545165371-750e95b1682a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" 
+                         alt="Harshal portrait" 
+                         class="rounded-lg shadow-xl w-full h-auto max-h-96 object-cover">
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl font-bold text-yellow-400 mb-6">About Harshal & Actor's Room</h2>
+                    <p class="text-gray-300 mb-4 leading-relaxed">
+                        Harshal is a seasoned actor and acting coach with over 15 years of experience in theater, film, and television. 
+                        His journey began at the prestigious National School of Drama, and since then he has performed in numerous 
+                        critically acclaimed productions.
+                    </p>
+                    <p class="text-gray-300 mb-4 leading-relaxed">
+                        The <span class="text-yellow-400 font-semibold">Actor's Room</span> was founded in 2015 with a vision to create 
+                        a nurturing space where aspiring actors can develop their craft under expert guidance. Our approach combines 
+                        traditional techniques with innovative methods tailored to each student's unique potential.
+                    </p>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        What sets us apart is our commitment to not just teaching acting, but cultivating artists who can bring depth, 
+                        authenticity, and emotional truth to their performances.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="bg-gray-800 px-4 py-3 rounded-lg flex items-center">
+                            <i class="fas fa-award text-yellow-400 text-xl mr-3"></i>
+                            <span class="text-gray-200">15+ Years Experience</span>
+                        </div>
+                        <div class="bg-gray-800 px-4 py-3 rounded-lg flex items-center">
+                            <i class="fas fa-users text-yellow-400 text-xl mr-3"></i>
+                            <span class="text-gray-200">200+ Students Trained</span>
+                        </div>
+                        <div class="bg-gray-800 px-4 py-3 rounded-lg flex items-center">
+                            <i class="fas fa-film text-yellow-400 text-xl mr-3"></i>
+                            <span class="text-gray-200">50+ Productions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-yellow-400 mb-12">Student Testimonials</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-700 p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Student" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="text-yellow-400 font-semibold">Priya Sharma</h4>
+                            <p class="text-gray-400 text-sm">Theater Artist</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">
+                        "Harshal's coaching transformed my approach to character development. His insights into emotional authenticity 
+                        helped me land my first professional role within months of training."
+                    </p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-700 p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Student" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="text-yellow-400 font-semibold">Rahul Mehta</h4>
+                            <p class="text-gray-400 text-sm">Film Actor</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">
+                        "The personalized attention I received in one-on-one sessions was invaluable. Harshal identified my strengths 
+                        and weaknesses in a way no other coach had before."
+                    </p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-700 p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Student" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="text-yellow-400 font-semibold">Ananya Patel</h4>
+                            <p class="text-gray-400 text-sm">TV Serial Actress</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">
+                        "The online coaching program was so flexible and effective. Even though we were remote, Harshal created an 
+                        immersive learning experience that rivaled in-person training."
+                    </p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enquiry Section -->
+    <section id="enquiry" class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-yellow-400 mb-12">Enquiry Form</h2>
+            <div class="max-w-3xl mx-auto bg-gray-800 rounded-lg shadow-xl overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-yellow-600 p-8 text-gray-900">
+                        <h3 class="text-2xl font-bold mb-4">Coaching Options</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+                                    <i class="fas fa-users text-gray-900 text-xl"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <h4 class="font-bold">Group Coaching</h4>
+                                    <p class="text-gray-900">Weekly workshops with 8-12 students</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+                                    <i class="fas fa-user text-gray-900 text-xl"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <h4 class="font-bold">Personal Coaching</h4>
+                                    <p class="text-gray-900">One-on-one customized sessions</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+                                    <i class="fas fa-laptop text-gray-900 text-xl"></i>
+                                </div>
+                                <div class="ml-3">
+                                    <h4 class="font-bold">Online Coaching</h4>
+                                    <p class="text-gray-900">Flexible remote training via Zoom</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <h4 class="font-bold mb-2">Contact Info</h4>
+                            <p><i class="fas fa-phone mr-2"></i> +91 98765 43210</p>
+                            <p class="mt-2"><i class="fas fa-envelope mr-2"></i> harshal@actorsroom.com</p>
+                            <p class="mt-2"><i class="fas fa-map-marker-alt mr-2"></i> Mumbai, India</p>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 p-8">
+                        <form id="enquiryForm" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-gray-300 mb-1">Full Name</label>
+                                <input type="text" id="name" name="name" required 
+                                       class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 text-gray-200">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-300 mb-1">Email</label>
+                                <input type="email" id="email" name="email" required 
+                                       class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 text-gray-200">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-gray-300 mb-1">Phone</label>
+                                <input type="tel" id="phone" name="phone" 
+                                       class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 text-gray-200">
+                            </div>
+                            <div>
+                                <label for="coachingType" class="block text-gray-300 mb-1">Coaching Type</label>
+                                <select id="coachingType" name="coachingType" required 
+                                        class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 text-gray-200">
+                                    <option value="">Select an option</option>
+                                    <option value="group">Group Coaching</option>
+                                    <option value="personal">Personal Coaching</option>
+                                    <option value="online">Online Coaching</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="message" class="block text-gray-300 mb-1">Message</label>
+                                <textarea id="message" name="message" rows="3" 
+                                          class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 text-gray-200"></textarea>
+                            </div>
+                            <button type="submit" 
+                                    class="w-full bg-yellow-600 hover:bg-yellow-500 text-gray-900 font-bold py-3 px-4 rounded-md transition duration-300">
+                                Submit Enquiry
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Panel (Hidden by default) -->
+    <section id="admin" class="py-16 bg-gray-800 hidden">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-yellow-400 mb-8">Admin Dashboard</h2>
+            <div class="bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="text-xl font-semibold text-yellow-400">Recent Enquiries</h3>
+                        <div class="flex space-x-2">
+                            <button id="refreshBtn" class="bg-gray-700 hover:bg-gray-600 text-gray-200 px-4 py-2 rounded-md transition">
+                                <i class="fas fa-sync-alt mr-2"></i> Refresh
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Filter Tabs -->
+                    <div class="flex border-b border-gray-700 mb-6">
+                        <button class="filter-btn px-4 py-2 font-medium text-gray-300 hover:text-yellow-400 border-b-2 border-transparent hover:border-yellow-400 transition" data-filter="all">
+                            All Enquiries
+                        </button>
+                        <button class="filter-btn px-4 py-2 font-medium text-gray-300 hover:text-yellow-400 border-b-2 border-transparent hover:border-yellow-400 transition" data-filter="group">
+                            Group Coaching
+                        </button>
+                        <button class="filter-btn px-4 py-2 font-medium text-gray-300 hover:text-yellow-400 border-b-2 border-transparent hover:border-yellow-400 transition" data-filter="personal">
+                            Personal Coaching
+                        </button>
+                        <button class="filter-btn px-4 py-2 font-medium text-gray-300 hover:text-yellow-400 border-b-2 border-transparent hover:border-yellow-400 transition" data-filter="online">
+                            Online Coaching
+                        </button>
+                    </div>
+                    
+                    <!-- Enquiries List -->
+                    <div id="enquiriesContainer" class="space-y-4">
+                        <!-- Enquiries will be loaded here via JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold text-yellow-400">Harshal's Actor's Room</h3>
+                    <p class="mt-1">Transforming actors through expert coaching</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-yellow-400 transition">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-yellow-400 transition">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-yellow-400 transition">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-yellow-400 transition">
+                        <i class="fab fa-youtube text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p>&copy; 2023 Harshal's Actor's Room. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+        <div class="bg-gray-800 rounded-lg p-8 max-w-md w-full mx-4">
+            <div class="text-center">
+                <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-check text-white text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-green-400 mb-2">Enquiry Submitted!</h3>
+                <p class="text-gray-300 mb-6">Thank you for your interest. We'll get back to you soon.</p>
+                <button id="closeModal" class="bg-yellow-600 hover:bg-yellow-500 text-gray-900 font-bold py-2 px-6 rounded-md transition">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Login Modal -->
+    <div id="adminLoginModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+        <div class="bg-gray-800 rounded-lg p-8 max-w-md w-full mx-4">
+            <div class="text-center mb-6">
+                <h3 class="text-2xl font-bold text-yellow-400">Admin Login</h3>
+            </div>
+            <form id="loginForm" class="space-y-4">
+                <div>
+                    <label for="username" class="block text-gray-300 mb-1">Username</label>
+                    <input type="text" id="username" name="username" required 
+                           class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 text-gray-200">
+                </div>
+                <div>
+                    <label for="password" class="block text-gray-300 mb-1">Password</label>
+                    <input type="password" id="password" name="password" required 
+                           class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 text-gray-200">
+                </div>
+                <div class="flex justify-between items-center">
+                    <button type="submit" 
+                            class="bg-yellow-600 hover:bg-yellow-500 text-gray-900 font-bold py-2 px-6 rounded-md transition">
+                        Login
+                    </button>
+                    <button type="button" id="cancelLogin" 
+                            class="bg-gray-700 hover:bg-gray-600 text-gray-200 font-bold py-2 px-6 rounded-md transition">
+                        Cancel
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Admin link behavior
+        const adminLink = document.querySelector('a[href="admin/login.html"]');
+        const adminLoginModal = document.getElementById('adminLoginModal');
+        const cancelLogin = document.getElementById('cancelLogin');
+        const loginForm = document.getElementById('loginForm');
+        
+        adminLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            adminLoginModal.classList.remove('hidden');
+        });
+        
+        cancelLogin.addEventListener('click', () => {
+            adminLoginModal.classList.add('hidden');
+        });
+        
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    if (username === 'admin' && password === 'password123') {
+        // ✅ Redirect to dashboard page
+        window.location.href = 'admin/dashboard.html';
+    } else {
+        alert('Invalid credentials. Try admin/password123 for demo purposes.');
+    }
+        });
+        
+ // Enquiry form submission
+document.addEventListener('DOMContentLoaded', () => {
+  const enquiryForm = document.getElementById('enquiryForm');
+  const successModal = document.getElementById('successModal');
+  const closeModal = document.getElementById('closeModal');
+  const adminSection = document.getElementById('admin');
+
+  if (!enquiryForm || !successModal || !closeModal || !adminSection) {
+    console.error("Some DOM elements are missing.");
+    return;
+  }
+
+  enquiryForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const formData = {
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value,
+      phone: document.getElementById('phone').value,
+      coachingType: document.getElementById('coachingType').value,
+      message: document.getElementById('message').value,
+      timestamp: new Date().toISOString(),
+      status: 'new'
+    };
+
+    fetch('http://localhost:3000/api/enquiry', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)
+    })
+      .then(response => {
+        if (response.ok) {
+          successModal.classList.remove('hidden');
+          enquiryForm.reset();
+          if (!adminSection.classList.contains('hidden')) {
+            loadEnquiries();
+          }
+        } else {
+          alert("Failed to submit enquiry.");
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert("Server error. Please try again later.");
+      });
+  });
+
+  closeModal.addEventListener('click', () => {
+    successModal.classList.add('hidden');
+  });
+
+// Admin panel functionality
+const refreshBtn = document.getElementById('refreshBtn');
+const filterBtns = document.querySelectorAll('.filter-btn');
+const enquiriesContainer = document.getElementById('enquiriesContainer');
+
+refreshBtn?.addEventListener('click', () => loadEnquiries());
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('text-yellow-400', 'border-yellow-400'));
+    btn.classList.add('text-yellow-400', 'border-yellow-400');
+    loadEnquiries(btn.dataset.filter);
+  });
+});
+
+async function loadEnquiries(filter = 'all') {
+  try {
+    const res = await fetch('http://localhost:3000/api/enquiry');
+    const enquiries = await res.json();
+
+    let filtered = enquiries;
+    if (filter !== 'all') {
+      filtered = enquiries.filter(e => e.coachingType === filter);
+    }
+
+    filtered.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+    enquiriesContainer.innerHTML = '';
+
+    if (!filtered.length) {
+      enquiriesContainer.innerHTML = `
+        <div class="text-center py-8 text-gray-400">
+          <i class="fas fa-inbox text-4xl mb-4"></i>
+          <p>No enquiries found.</p>
+        </div>
+      `;
+      return;
+    }
+
+    filtered.forEach((enquiry, index) => {
+      const date = new Date(enquiry.timestamp).toLocaleString();
+      let icon = 'question', color = 'text-gray-400';
+
+      switch (enquiry.coachingType) {
+        case 'group': icon = 'users'; color = 'text-blue-400'; break;
+        case 'personal': icon = 'user'; color = 'text-green-400'; break;
+        case 'online': icon = 'laptop'; color = 'text-purple-400'; break;
+      }
+
+      const card = document.createElement('div');
+      card.className = `enquiry-card bg-gray-700 p-4 rounded-lg ${index < 3 ? 'border-l-4 border-yellow-500' : ''}`;
+      card.innerHTML = `
+        <div class="flex justify-between items-start">
+          <div>
+            <h4 class="font-bold text-lg text-yellow-400">${enquiry.name}</h4>
+            <p class="text-gray-300">${enquiry.email}</p>
+            <p class="text-gray-400 text-sm mt-1">${enquiry.phone || 'No phone provided'}</p>
+          </div>
+          <div class="flex items-center">
+            <i class="fas fa-${icon} ${color} text-xl mr-2"></i>
+            <span class="text-gray-300 capitalize">${enquiry.coachingType}</span>
+          </div>
+        </div>
+        <div class="mt-3">
+          <p class="text-gray-300">${enquiry.message || 'No message provided'}</p>
+        </div>
+        <div class="mt-3 flex justify-between items-center">
+          <span class="text-gray-500 text-sm">${date}</span>
+          <span class="px-2 py-1 bg-gray-600 text-gray-200 text-xs rounded-full">${enquiry.status || 'new'}</span>
+        </div>
+      `;
+      enquiriesContainer.appendChild(card);
+    });
+
+  } catch (err) {
+    console.error("Load Enquiries Error:", err);
+    enquiriesContainer.innerHTML = `<p class="text-red-500">🚫 Error loading enquiries.</p>`;
+  }
+}
+
+// Auto prompt login modal if admin hash is in URL
+if (window.location.hash === '#admin') {
+  adminLoginModal?.classList.remove('hidden');
+}
+
+// Smooth scrolling for internal links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    const href = this.getAttribute('href');
+    if (href === '#admin') return;
+    e.preventDefault();
+    const target = document.querySelector(href);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+    });
+    });
+</script>
+</body>
+</html>
